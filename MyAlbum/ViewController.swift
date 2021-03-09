@@ -21,10 +21,9 @@ class ViewController: UIViewController {
     @IBAction func challenge(_ sender: Any) {
         let message = "가격은 ₩\(currentValue) 입니다"
         let alert = UIAlertController(title: "도오오오전 입니다", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "ok", style: .default, handler: nil)
+        let action = UIAlertAction(title: "ok", style: .default, handler: { action in self.refresh()})
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
-        refresh()
         
     }
     
